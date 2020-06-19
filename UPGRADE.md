@@ -74,6 +74,21 @@ Note: the option in `table_storage` needs to be updated only if you have changed
 by using v2 options as `table_name`, `column_name`, `column_length` or `executed_at_column_name`. If you did not change
 those settings is recommended to not provide the options and let doctrine figure out the best settings.
 
+## Custom migration templates
+
+Before
+
+```php
+final class Version<version> extends AbstractMigration
+```
+
+After
+
+```php
+final class <className> extends AbstractMigration
+```
+
+
 ## Code BC breaks
 
 Most of the code is protected by the `@internal` declaration and in a very rare cases you might have dealt with the 
